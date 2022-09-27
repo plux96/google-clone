@@ -1,70 +1,117 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center" >
+<img height="100" src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" />
+</p>
 
-## Available Scripts
+# Google Clone with Next.js
 
-In the project directory, you can run:
+It is the clone of the Google where you can search for anything and it will show the exactly same result we've used the Google Custom API through which we made this project, this is full responsive and you can also install it as the PWA. You can visit the links as well not danger in that, but there is one drawback of this that Google only allow 100 request from single API KEY per day. So this application can search only 100 times a day.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Realtime and Accurate Google Search
+- Full Screen mode
+- Installable **PWA**
+- Search Any Query
+- Full Responsiveness
+- Dark Theme support based on user's device
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies used
 
-### `npm test`
+<p>  
+<img title="React JS" width="60" src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-128.png" />
+<img title="Firebase" width="60" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Firebase_Logo.png"  />&nbsp;
+<img title="Material UI" width="60" src="https://miro.medium.com/max/1400/1*Smbj_VLH7JRp9GhLaKyiUQ.png"> 
+<img title="Google Search API" width="60" src="https://cutt.ly/zRgpYnW">
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
 
-### `npm run build`
+[Click Here to see the Live Demo](https://next-gooogle.vercel.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p>
+  <img width="400" src="https://imgur.com/AUjbZpT.png"/>
+  <img width="400" src="https://imgur.com/QDE3zc8.png"/>
+  <br>
+  <img width="200" src="https://imgur.com/GNouoom.png"/>
+  <img width="200" src="https://imgur.com/EeudSyI.png"/>
+</p>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create a directory or a folder
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  mkdir project
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Clone the project
 
-## Learn More
+```bash
+  git clone https://github.com/plux96/google-clone.git
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Go to the project directory
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  cd project
+```
 
-### Code Splitting
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+  npm install
+  # or
+  yarn
+```
 
-### Analyzing the Bundle Size
+First, run the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+  npm run dev
+  # or
+  yarn dev
+```
 
-### Making a Progressive Web App
+Open http://localhost:3000 with your browser to see the result.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You can start editing the page by modifying pages/index.js. The page auto-updates as you edit the file.
 
-### Advanced Configuration
+API routes can be accessed on http://localhost:3000/api/hello. This endpoint can be edited in pages/api/hello.js.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The pages/api directory is mapped to /api/\*. Files in this directory are treated as API routes instead of React pages.
 
-### Deployment
+## Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To run this project, you will need to add the following environment variables to your .env file
 
-### `npm run build` fails to minify
+`NEXT_PUBLIC_API_KEY` - [Click Here](https://developers.google.com/custom-search/v1/introduction#identify_your_application_to_google_with_api_ke)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Go to link and click on **Get a Key**
+- If you've already created a project than continue with it else create a new one and follow the steps after completing you'll get the API KEY
+
+`NEXT_PUBLIC_CONTEXT_KEY` - [Click Here](https://cse.google.com/cse/create/new)
+
+- Go to link and type `www.google.com` and click **Create**
+- then click on `Get Code` 
+ - you will get the script file tag in that file such as `<script async src="https://cse.google.com/cse.js?cx=b221ffffddfd63f8a4"></script>` we  only need the `cx` value *copy* that and paste in you `.env` 
+
+`NEXT_PUBLIC_GEOLOCATION_API` - [Click Here](https://ipdata.co/)
+ - Go to the link and create an account and get the API For free
+ - There is 1500 request limit per day so be carefull with that and paste it to `.env` 
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Feedback
+
+If you have any feedback, please reach out to us at rustamov.umidbek@gmail.com
+
+## Developer
+
+- [@plux96](https://github.com/plux96/)
