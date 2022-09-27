@@ -1,4 +1,3 @@
-
 <p align="center" >
 <img height="100" src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" />
 </p>
@@ -29,7 +28,6 @@ It is the clone of the Google where you can search for anything and it will show
 
 [Click Here to see the Live Demo](https://next-gooogle.vercel.app/)
 
-
 ## Screenshots
 
 <p>
@@ -39,7 +37,6 @@ It is the clone of the Google where you can search for anything and it will show
   <img width="200" src="https://imgur.com/GNouoom.png"/>
   <img width="200" src="https://imgur.com/EeudSyI.png"/>
 </p>
-
 
 ## Getting Started
 
@@ -97,12 +94,13 @@ To run this project, you will need to add the following environment variables to
 `NEXT_PUBLIC_CONTEXT_KEY` - [Click Here](https://cse.google.com/cse/create/new)
 
 - Go to link and type `www.google.com` and click **Create**
-- then click on `Get Code` 
- - you will get the script file tag in that file such as `<script async src="https://cse.google.com/cse.js?cx=b221ffffddfd63f8a4"></script>` we  only need the `cx` value *copy* that and paste in you `.env` 
+- then click on `Get Code`
+- you will get the script file tag in that file such as `<script async src="https://cse.google.com/cse.js?cx=b221ffffddfd63f8a4"></script>` we only need the `cx` value _copy_ that and paste in you `.env`
 
 `NEXT_PUBLIC_GEOLOCATION_API` - [Click Here](https://ipdata.co/)
- - Go to the link and create an account and get the API For free
- - There is 1500 request limit per day so be carefull with that and paste it to `.env` 
+
+- Go to the link and create an account and get the API For free
+- There is 1500 request limit per day so be carefull with that and paste it to `.env`
 
 ## License
 
