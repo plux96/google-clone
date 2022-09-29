@@ -1,20 +1,25 @@
 import "./App.css";
+import { useState } from "react";
 import Home from "./pages/Home";
 import SearchResult from "./pages/SearchResult";
 import NotFound from "./pages/NotFound";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { SearchContext } from "./Contexts/SearchContext";
 
 function App() {
+  const [input, setInput] = useState("");
   return (
     // BEM
     <div className="app">
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/search" element={<SearchResult />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
+      <SearchContext.Provider value={{ input, setInput }}>
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/search" element={<SearchResult />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Router>
+      </SearchContext.Provider>
     </div>
   );
 }
