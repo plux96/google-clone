@@ -8,10 +8,11 @@ import { SearchContext } from "./Contexts/SearchContext";
 
 function App() {
   const [input, setInput] = useState("");
+  const [press, setPress] = useState(false);
   return (
     // BEM
     <div className="app">
-      <SearchContext.Provider value={{ input, setInput }}>
+      <SearchContext.Provider value={{ input, setInput, press, setPress }}>
         <Router>
           <Routes>
             <Route exact path="/" element={<Home />} />

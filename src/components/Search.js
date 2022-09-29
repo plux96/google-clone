@@ -6,8 +6,9 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { SearchContext } from "../Contexts/SearchContext";
 
-function Search({ hideButtons = false }) {
+function Search({ hideButtons = true }) {
   const { input, setInput } = useContext(SearchContext);
+
   const navigate = useNavigate();
 
   const search = (e) => {
@@ -16,21 +17,18 @@ function Search({ hideButtons = false }) {
 
     navigate("/search");
   };
-  return (
-    <form className="search">
-      <div className="search__input">
-        <SearchIcon className="search__inputIcon" />
-        <input value={input} onChange={(e) => setInput(e.target.value)} />
-        <MicIcon />
-      </div>
-      {!hideButtons ? (
+  let show = () => {
+    if (hideButtons) {
+      return (
         <div className="search__buttons">
           <Button type="submit" onClick={search} variant="outlined">
             Google Search
           </Button>
           <Button variant="outlined">I'm Feeling Lucky</Button>
         </div>
-      ) : (
+      );
+    } else {
+      return (
         <div className="search__buttons">
           <Button
             className="search__buttonsHidden"
@@ -44,7 +42,22 @@ function Search({ hideButtons = false }) {
             I'm Feeling Lucky
           </Button>
         </div>
-      )}
+      );
+    }
+  };
+  return (
+    <form className="search">
+      <div className="search__input">
+        <SearchIcon className="search__inputIcon" />
+        <input
+          value={input}
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
+        />
+        <MicIcon />
+      </div>
+      {show()}
     </form>
   );
 }
