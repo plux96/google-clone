@@ -21,7 +21,7 @@
 .search__input > input:focus {
   outline-width: 0;
 }
-
+ 
 .search__inputIcon {
   color: gray;
 }
